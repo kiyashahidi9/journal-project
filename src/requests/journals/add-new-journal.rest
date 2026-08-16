@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/journals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJmbHllcjEwNTkiLCJpYXQiOjE3ODY1NTIxMDIsImV4cCI6MTc4NjYzODUwMn0.oj5sYbndrqr-xRHTj8mELe5EPyd-acTLDy7Xm-WCACI
+
+{
+    "title": "Launch School"
+}
