@@ -27,6 +27,7 @@ import {
     createEntrySchema,
     entryIdParamSchema,
     entryTitleSchema,
+    entryBodySchema,
 } from '../validation/journalValidation'
 import { AuthenticationRequest } from '../utils/auth'
 
@@ -201,7 +202,7 @@ journalRouter.patch('/:journalId/entries/:entryId/body', async (req, res) => {
     if (!userId) throw new AuthorizationError('Authentication Required')
 
     const parsedParams = entryIdParamSchema.safeParse(req.params)
-    const parsedBody = entryTitleSchema.safeParse(req.body.body)
+    const parsedBody = entryBodySchema.safeParse(req.body.body)
 
     if (!parsedParams.success) {
         throw new ValidationError('Invalid Journal or Entry ID')
