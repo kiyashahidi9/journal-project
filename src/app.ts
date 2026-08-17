@@ -4,11 +4,12 @@ import middleware from './utils/middleware'
 import journalRouter from './routes/journalRouter'
 import authRouter from './routes/authRouter'
 import { requireAuth } from './utils/auth'
+// import cors from 'cors'
 
 const app = express()
 
+// app.use(cors())
 app.use(express.json())
-
 
 app.use('/api/auth', authRouter)
 app.use('/api/journals', requireAuth, journalRouter)
